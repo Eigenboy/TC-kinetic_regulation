@@ -1,5 +1,5 @@
 function [avT,W,diss,i1]=prd_and_dsp_S(t,z,k,a)
-%period and dissipation for brusselator
+% compute both period and the energy dissipation for brusselator
 N=length(t);
 jj=1;
 T(jj)=t(1);
@@ -19,6 +19,7 @@ end
 M=length(T);
 
 if (M>5)&&((ma-mi)/mean(z(:,1))>0.03)
+    % fluxes computing
     for ii=i1(1):i1(M)
         Jf=zeros(4,1);                   Jb=zeros(4,1);
         Jf(1)=k(1)*a;                    Jb(1)=k(5)*z(ii,1);

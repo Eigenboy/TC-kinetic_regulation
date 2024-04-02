@@ -1,5 +1,8 @@
 function avT=periods(t,z)
-%period of one oscillatory array
+% computing the period of a periodic sequence
+% t is the time sequence and z is the corresponding periodic sequence
+% recording the events when z ascends across the middle value
+
 N=length(t);
 jj=1;
 T(jj)=t(1);
